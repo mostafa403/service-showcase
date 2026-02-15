@@ -3,200 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مصطفى حماده | معرض أعمالي</title>
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+    <title>معرض الخدمات الاحترافية</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        cairo: ['Cairo', 'sans-serif'],
-                    },
-                    colors: {
-                        brand: {
-                            50: '#f0f9ff',
-                            100: '#e0f2fe',
-                            500: '#0ea5e9',
-                            600: '#0284c7',
-                            700: '#0369a1',
-                            900: '#0c4a6e',
-                        },
-                        whatsapp: '#25D366',
-                        whatsappHover: '#128C7E'
-                    }
-                }
-            }
-        }
-    </script>
-
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Cairo', sans-serif; scroll-behavior: smooth; }
-        .glass-effect { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); }
-        .gradient-text { background: linear-gradient(to left, #0284c7, #2563eb); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        body { font-family: 'Tajawal', sans-serif; }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800 font-cairo overflow-x-hidden">
+<body class="bg-gray-50 text-gray-800">
 
-    <nav class="fixed w-full z-50 glass-effect shadow-sm transition-all duration-300" id="navbar">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
-                <div class="flex-shrink-0 flex items-center">
-                    <a href="#" class="text-2xl font-bold text-brand-700 flex items-center gap-2">
-                        <i class="fa-solid fa-layer-group text-3xl"></i>
-                        <span>برو<span class="text-gray-900">سيرفس</span></span>
-                    </a>
-                </div>
-                
-                <div class="hidden md:flex space-x-4 space-x-reverse items-center text-sm lg:text-base font-semibold">
-                    <a href="#home" class="text-gray-700 hover:text-brand-600 transition">الرئيسية</a>
-                    <a href="#services" class="text-gray-700 hover:text-brand-600 transition">خدماتي</a>
-                    <a href="#portfolio" class="text-gray-700 hover:text-brand-600 transition">أعمالي</a>
-                    <a href="#testimonials" class="text-gray-700 hover:text-brand-600 transition">آراء العملاء</a>
-                    <a href="#about" class="text-gray-700 hover:text-brand-600 transition">من أنا</a>
-                    <a href="#payment" class="text-gray-700 hover:text-brand-600 transition">الدفع</a>
-                    
-                    <button class="mr-4 bg-whatsapp text-white px-5 py-2 rounded-full flex items-center gap-2 shadow-lg text-sm cursor-default">
-                        <i class="fa-brands fa-whatsapp text-lg"></i> <span>متاح للتواصل</span>
-                    </button>
-                </div>
+    <header class="bg-blue-600 text-white py-12 text-center">
+        <h1 class="text-4xl font-bold">مرحباً بك في معرض أعمالي</h1>
+        <p class="mt-4 text-xl text-blue-100">حلول متكاملة في تحليل البيانات، الكتابة، والبرمجة</p>
+    </header>
 
-                <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-btn" class="text-gray-700 focus:outline-none">
-                        <i class="fa-solid fa-bars text-2xl"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-        
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full shadow-lg">
-            <div class="px-2 pt-2 pb-3 space-y-1 text-center">
-                <a href="#home" class="block px-3 py-2 text-gray-700">الرئيسية</a>
-                <a href="#services" class="block px-3 py-2 text-gray-700">خدماتي</a>
-                <a href="#portfolio" class="block px-3 py-2 text-gray-700">أعمالي</a>
-                <a href="#about" class="block px-3 py-2 text-gray-700">من أنا</a>
-                <button class="w-full mt-2 px-4 py-3 bg-whatsapp text-white rounded-lg font-bold">تواصل عبر المنصة</button>
-            </div>
-        </div>
-    </nav>
-
-    <section id="home" class="relative pt-32 pb-20 bg-gradient-to-br from-brand-50 via-white to-gray-100 overflow-hidden">
-        <div class="max-w-7xl mx-auto px-4 text-center relative z-10">
-            <div class="inline-flex items-center px-4 py-2 rounded-full bg-brand-100 text-brand-700 text-sm font-semibold mb-6">
-                ✨ جودة، دقة، واحترافية عالية
-            </div>
-            <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-                نحول <span class="gradient-text">البيانات</span> إلى قرارات، و<span class="gradient-text">الكلمات</span> إلى تأثير
-            </h1>
-            <p class="text-lg text-gray-600 mb-10 max-w-3xl mx-auto">
-                أقدم حلولاً متكاملة في تحليل البيانات وكتابة المحتوى، مع التزام تام بمعايير منصات العمل الحر.
+    <section class="container mx-auto px-6 py-16">
+        <div class="bg-white rounded-lg shadow-lg p-8 text-center max-w-3xl mx-auto">
+            <h2 class="text-3xl font-bold text-blue-600 mb-4">من أنا؟</h2>
+            <p class="text-lg leading-relaxed text-gray-600">
+                مستقل متخصص في تقديم خدمات رقمية عالية الجودة. أجمع بين الدقة في تحليل البيانات والإبداع في صياغة المحتوى، مع خبرة تقنية في بناء المواقع البسيطة والفعالة. هدفي دائماً هو مساعدة العملاء على تحقيق أهدافهم بأفضل صورة ممكنة.
             </p>
-            <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="#portfolio" class="px-8 py-4 bg-brand-600 text-white rounded-lg font-bold hover:bg-brand-700 transition shadow-lg transform hover:-translate-y-1">
-                    شاهد معرض أعمالي
-                </a>
-                <button class="px-8 py-4 bg-white text-gray-700 border border-gray-300 rounded-lg font-bold cursor-default">
-                    التواصل عبر الرسائل
-                </button>
-            </div>
         </div>
     </section>
 
-    <section id="services" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">خدماتي الاحترافية</h2>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="bg-gray-50 p-8 rounded-2xl border border-gray-100">
-                    <i class="fa-solid fa-chart-line text-blue-600 text-3xl mb-4"></i>
+    <section class="bg-gray-100 py-16">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">خدماتي</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md border-t-4 border-blue-500">
                     <h3 class="text-xl font-bold mb-3">تحليل البيانات</h3>
-                    <p class="text-gray-600">تحويل البيانات الخام إلى تقارير تفاعلية ورؤى واضحة (Excel/PowerBI).</p>
+                    <p class="text-gray-600 text-sm">تنظيف البيانات، تمثيلها بصرياً، وإعداد التقارير المالية والإحصائية بدقة متناهية.</p>
                 </div>
-                <div class="bg-gray-50 p-8 rounded-2xl border border-gray-100">
-                    <i class="fa-solid fa-pen-nib text-green-600 text-3xl mb-4"></i>
-                    <h3 class="text-xl font-bold mb-3">كتابة المحتوى</h3>
-                    <p class="text-gray-600">صياغة محتوى إبداعي وتسويقي يتوافق مع معايير الـ SEO.</p>
+                <div class="bg-white p-6 rounded-lg shadow-md border-t-4 border-green-500">
+                    <h3 class="text-xl font-bold mb-3">كتابة المحتوى و SEO</h3>
+                    <p class="text-gray-600 text-sm">كتابة مقالات متوافقة مع محركات البحث تضمن لك الظهور في النتائج الأولى وزيادة الزوار.</p>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="portfolio" class="py-20 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold mb-4">نماذج من أعمالي</h2>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-                <div class="bg-white p-6 rounded-2xl shadow-sm">
-                    <i class="fa-solid fa-chart-pie text-5xl text-blue-300 mb-4"></i>
-                    <h4 class="font-bold">تحليل المبيعات</h4>
-                </div>
-                <div class="bg-white p-6 rounded-2xl shadow-sm">
-                    <i class="fa-solid fa-file-alt text-5xl text-green-300 mb-4"></i>
-                    <h4 class="font-bold">استراتيجيات المحتوى</h4>
-                </div>
-                <div class="bg-white p-6 rounded-2xl shadow-sm">
-                    <i class="fa-solid fa-laptop-code text-5xl text-purple-300 mb-4"></i>
-                    <h4 class="font-bold">حلول رقمية</h4>
+                <div class="bg-white p-6 rounded-lg shadow-md border-t-4 border-purple-500">
+                    <h3 class="text-xl font-bold mb-3">تطوير الويب</h3>
+                    <p class="text-gray-600 text-sm">بناء واجهات مواقع بسيطة وسريعة الاستجابة باستخدام أحدث تقنيات الويب.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="payment" class="py-20 bg-white border-t">
-        <div class="max-w-7xl mx-auto px-4 text-center">
-            <h2 class="text-3xl font-bold mb-12">طرق الدفع المعتمدة</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="p-6 border rounded-2xl">
-                    <i class="fa-solid fa-briefcase text-brand-600 text-3xl mb-4"></i>
-                    <h3 class="font-bold mb-4">عبر المنصة</h3>
-                    <p class="text-sm text-gray-500">نقبل الدفع عبر أنظمة الضمان في كفيل ونفذلي.</p>
+    <section class="py-16 bg-blue-50">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold text-blue-800 mb-6">ضمان الجودة</h2>
+            <div class="flex flex-wrap justify-center gap-4 text-lg">
+                <span class="bg-white px-6 py-2 rounded-full shadow-sm border border-blue-200">✅ التزام تام بالمواعيد</span>
+                <span class="bg-white px-6 py-2 rounded-full shadow-sm border border-blue-200">✅ تعديلات مفتوحة حتى الرضا</span>
+                <span class="bg-white px-6 py-2 rounded-full shadow-sm border border-blue-200">✅ دعم فني بعد التسليم</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">آراء العملاء</h2>
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="italic bg-white p-6 rounded-xl shadow border-r-4 border-yellow-400">
+                    "عمل احترافي وسرعة في التنفيذ، سأتعامل معه مرة أخرى بكل تأكيد."
+                    <p class="mt-4 font-bold text-gray-800 not-italic text-sm">- عميل تجريبي 1</p>
                 </div>
-                <div class="p-6 border rounded-2xl">
-                    <i class="fa-solid fa-globe text-brand-600 text-3xl mb-4"></i>
-                    <h3 class="font-bold mb-4">بوابات إلكترونية</h3>
-                    <div class="flex justify-center gap-4 text-2xl text-gray-400">
-                        <i class="fa-brands fa-paypal"></i>
-                        <i class="fa-brands fa-cc-visa"></i>
-                        <i class="fa-brands fa-cc-mastercard"></i>
-                    </div>
-                </div>
-                <div class="p-6 border rounded-2xl">
-                    <i class="fa-solid fa-location-dot text-brand-600 text-3xl mb-4"></i>
-                    <h3 class="font-bold mb-4">خيارات محلية</h3>
-                    <p class="text-sm text-gray-500">متوفر كافة وسائل الدفع المحلية المعتمدة.</p>
+                <div class="italic bg-white p-6 rounded-xl shadow border-r-4 border-yellow-400">
+                    "دقة كبيرة في تحليل البيانات وتقارير واضحة جداً ساعدتني في اتخاذ القرار."
+                    <p class="mt-4 font-bold text-gray-800 not-italic text-sm">- عميل تجريبي 2</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="bg-gray-900 text-white py-12 text-center">
-        <div class="max-w-7xl mx-auto px-4">
-            <p class="text-brand-500 font-bold text-xl mb-4">مصطفى حماده</p>
-            <p class="text-gray-500 text-sm">جميع الحقوق محفوظة © 2026</p>
-            <div class="flex justify-center gap-6 mt-6 text-gray-400">
-                <i class="fa-brands fa-linkedin hover:text-white transition cursor-pointer"></i>
-                <i class="fa-brands fa-whatsapp hover:text-white transition cursor-pointer"></i>
-                <i class="fa-solid fa-envelope hover:text-white transition cursor-pointer"></i>
-            </div>
-        </div>
+    <footer class="bg-gray-800 text-white py-8 text-center">
+        <p>© 2026 جميع الحقوق محفوظة - معرض الأعمال التجريبي</p>
     </footer>
 
-    <script>
-        // Mobile Menu Toggle
-        const mobileBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        if(mobileBtn) {
-            mobileBtn.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
-        }
-    </script>
 </body>
 </html>
