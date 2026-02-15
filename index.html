@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مصطفى حماده | خدمات احترافية</title>
+    <title>مصطفى حماده | معرض الخدمات الاحترافية</title>
     
-    <!-- خط 'القاهرة' -->
+    <!-- الخطوط: القاهرة -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
     
-    <!-- Font Awesome -->
+    <!-- الأيقونات: Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <!-- Tailwind CSS -->
@@ -44,8 +44,8 @@
         body { font-family: 'Cairo', sans-serif; scroll-behavior: smooth; }
         .glass-effect { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); }
         .gradient-text { background: linear-gradient(to left, #0284c7, #2563eb); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        /* كلاس للعناصر غير الفعالة تماماً للعرض فقط */
-        .inactive-view { pointer-events: none; cursor: default; opacity: 0.7; filter: grayscale(0.2); }
+        /* كلاس مخصص للعرض فقط دون تفاعل لضمان القبول في المنصات */
+        .inactive-view { pointer-events: none; cursor: default; opacity: 0.7; filter: grayscale(0.15); }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800 font-cairo overflow-x-hidden">
@@ -54,6 +54,7 @@
     <nav class="fixed w-full z-50 glass-effect shadow-sm transition-all duration-300" id="navbar">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
+                <!-- الشعار -->
                 <div class="flex-shrink-0 flex items-center">
                     <div class="text-2xl font-bold text-brand-700 flex items-center gap-2">
                         <i class="fa-solid fa-layer-group text-3xl"></i>
@@ -61,31 +62,45 @@
                     </div>
                 </div>
                 
+                <!-- الروابط -->
                 <div class="hidden md:flex space-x-4 space-x-reverse items-center text-sm lg:text-base font-semibold">
                     <a href="#home" class="text-gray-700 hover:text-brand-600 transition">الرئيسية</a>
                     <a href="#services" class="text-gray-700 hover:text-brand-600 transition">خدماتي</a>
                     <a href="#portfolio" class="text-gray-700 hover:text-brand-600 transition">أعمالي</a>
                     <a href="#testimonials" class="text-gray-700 hover:text-brand-600 transition">آراء العملاء</a>
                     <a href="#about" class="text-gray-700 hover:text-brand-600 transition">من أنا</a>
-                    <a href="#payment" class="text-gray-700 hover:text-brand-600 transition font-bold text-brand-600">الدفع</a>
+                    <a href="#payment" class="text-gray-700 hover:text-brand-600 transition">الدفع</a>
                     
-                    <div class="mr-4 bg-gray-100 text-gray-500 px-5 py-2 rounded-full flex items-center gap-2 text-sm pointer-events-none">
-                        <i class="fa-solid fa-comments"></i> <span>تواصل عبر المنصة</span>
+                    <!-- زر الحالة (غير فعال للعرض فقط) -->
+                    <div class="mr-4 bg-gray-100 text-gray-500 px-5 py-2 rounded-full flex items-center gap-2 text-sm border border-gray-200 pointer-events-none">
+                        <i class="fa-solid fa-circle text-green-500 text-[10px] animate-pulse"></i> <span>متاح للعمل عبر المنصة</span>
                     </div>
                 </div>
 
+                <!-- زر القائمة للجوال -->
                 <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-btn" class="text-gray-700 focus:outline-none">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-brand-600 focus:outline-none">
                         <i class="fa-solid fa-bars text-2xl"></i>
                     </button>
                 </div>
             </div>
         </div>
+        
+        <!-- القائمة المنسدلة للجوال -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full shadow-lg text-center">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="block px-3 py-2 rounded-md font-medium text-gray-700">الرئيسية</a>
+                <a href="#services" class="block px-3 py-2 rounded-md font-medium text-gray-700">خدماتي</a>
+                <a href="#portfolio" class="block px-3 py-2 rounded-md font-medium text-gray-700">أعمالي</a>
+                <a href="#about" class="block px-3 py-2 rounded-md font-medium text-gray-700">من أنا</a>
+                <div class="block mt-2 px-4 py-3 bg-gray-100 text-gray-400 rounded-lg font-bold pointer-events-none">تواصل عبر المنصة</div>
+            </div>
+        </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- قسم الهيرو (Hero Section) -->
     <section id="home" class="relative pt-32 pb-20 lg:pt-40 lg:pb-28 bg-gradient-to-br from-brand-50 via-white to-gray-100 overflow-hidden text-center">
-        <div class="max-w-7xl mx-auto px-4 relative z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="inline-flex items-center px-4 py-2 rounded-full bg-brand-100 text-brand-700 text-sm font-semibold mb-6">
                 ✨ جودة، دقة، واحترافية عالية
             </div>
@@ -93,11 +108,11 @@
                 نحول <span class="gradient-text">البيانات</span> إلى قرارات، و<span class="gradient-text">الكلمات</span> إلى تأثير
             </h1>
             <p class="text-lg md:text-xl text-gray-600 mb-10 leading-relaxed max-w-3xl mx-auto">
-                أقدم حلولاً متكاملة في تحليل البيانات لتنمية أعمالك، وخدمات كتابة المحتوى، مع التزام تام بقواعد المنصة.
+                أقدم حلولاً متكاملة في تحليل البيانات لتنمية أعمالك، وخدمات كتابة المحتوى، مع التزام تام بقواعد وشروط المنصة.
             </p>
             <div class="flex flex-col sm:flex-row justify-center gap-4">
                 <div class="px-8 py-4 bg-whatsapp text-white rounded-lg font-bold shadow-lg opacity-60 pointer-events-none flex items-center justify-center gap-2">
-                    <i class="fa-solid fa-message text-xl"></i> متاح عبر رسائل المنصة
+                    <i class="fa-solid fa-message text-xl"></i> تواصل عبر رسائل المنصة
                 </div>
                 <a href="#portfolio" class="px-8 py-4 bg-white text-gray-700 border border-gray-300 rounded-lg font-bold hover:bg-gray-50 transition">
                     شاهد أعمالي
@@ -106,7 +121,30 @@
         </div>
     </section>
 
-    <!-- Guarantee Section -->
+    <!-- قسم الخدمات (Services) -->
+    <section id="services" class="py-20 bg-white border-b border-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4 font-bold">خدمات متكاملة لنجاحك</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+                <div class="bg-gray-50 p-8 rounded-3xl border border-gray-100 shadow-sm">
+                    <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center text-blue-600 text-3xl mb-6">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">تحليل البيانات</h3>
+                    <p class="text-gray-600 leading-relaxed">تحويل الأرقام الخام إلى رؤى قابلة للتنفيذ وإنشاء لوحات معلومات (Dashboards) تفاعلية تخدم أهدافك.</p>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-3xl border border-gray-100 shadow-sm">
+                    <div class="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center text-green-600 text-3xl mb-6">
+                        <i class="fa-solid fa-pen-nib"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">كتابة وتحرير المحتوى</h3>
+                    <p class="text-gray-600 leading-relaxed">صياغة محتوى إبداعي وتسويقي يتوافق مع معايير الـ SEO لجذب الجمهور المستهدف.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم الضمان (Guarantee) -->
     <section id="guarantee" class="py-16 bg-brand-900 text-white relative overflow-hidden">
         <div class="absolute top-0 right-0 w-64 h-64 bg-white rounded-full mix-blend-overlay filter blur-3xl opacity-10"></div>
         <div class="absolute bottom-0 left-0 w-64 h-64 bg-brand-500 rounded-full mix-blend-overlay filter blur-3xl opacity-20"></div>
@@ -129,51 +167,52 @@
         </div>
     </section>
 
-    <!-- Testimonials Section -->
+    <!-- قسم آراء العملاء (Testimonials) -->
     <section id="testimonials" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">ماذا يقول عملاؤنا؟</h2>
-                <p class="text-gray-600 font-bold">قصص نجاح حقيقية من أشخاص تعاملوا معنا.</p>
-            </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4 font-bold">ماذا يقول عملاؤنا؟</h2>
+            <p class="text-gray-500 mb-16">قصص نجاح حقيقية من أشخاص تعاملوا معنا.</p>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-gray-50/50 p-8 rounded-3xl border border-gray-100 relative shadow-sm">
+                <!-- أحمد -->
+                <div class="bg-gray-50/50 p-8 rounded-3xl border border-gray-100 relative shadow-sm text-right">
                     <i class="fa-solid fa-quote-right text-4xl text-gray-200 absolute top-6 right-6"></i>
                     <p class="text-gray-600 mb-8 relative z-10 leading-relaxed italic">"تعامل راقي جداً واحترافية عالية في تحليل البيانات. التقرير ساعدني جداً في فهم مبيعاتي بشكل أفضل."</p>
                     <div class="flex items-center gap-4 justify-end">
-                        <div class="text-right"><h4 class="font-bold text-gray-900">أحمد محمد</h4><p class="text-xs text-gray-500">صاحب متجر إلكتروني</p></div>
-                        <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-lg">أ</div>
+                        <div><h4 class="font-bold text-gray-900">أحمد محمد</h4><p class="text-xs text-gray-500">صاحب متجر إلكتروني</p></div>
+                        <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold">أ</div>
                     </div>
                 </div>
-                <div class="bg-gray-50/50 p-8 rounded-3xl border border-gray-100 relative shadow-sm">
+                <!-- سارة -->
+                <div class="bg-gray-50/50 p-8 rounded-3xl border border-gray-100 relative shadow-sm text-right">
                     <i class="fa-solid fa-quote-right text-4xl text-gray-200 absolute top-6 right-6"></i>
                     <p class="text-gray-600 mb-8 relative z-10 leading-relaxed italic">"سرعة في الإنجاز ودقة في المواعيد، خاصة في موضوع الوساطة المالية. وفروا علي وقت ومجهود كبير."</p>
                     <div class="flex items-center gap-4 justify-end">
-                        <div class="text-right"><h4 class="font-bold text-gray-900">سارة علي</h4><p class="text-xs text-gray-500">مصممة جرافيك</p></div>
-                        <div class="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center text-white font-bold text-lg">س</div>
+                        <div><h4 class="font-bold text-gray-900">سارة علي</h4><p class="text-xs text-gray-500">مصممة جرافيك</p></div>
+                        <div class="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center text-white font-bold">س</div>
                     </div>
                 </div>
-                <div class="bg-gray-50/50 p-8 rounded-3xl border border-gray-100 relative shadow-sm">
+                <!-- محمود -->
+                <div class="bg-gray-50/50 p-8 rounded-3xl border border-gray-100 relative shadow-sm text-right">
                     <i class="fa-solid fa-quote-right text-4xl text-gray-200 absolute top-6 right-6"></i>
                     <p class="text-gray-600 mb-8 relative z-10 leading-relaxed italic">"جودة الكتابة ممتازة، المقالات كانت متوافقة مع السيو وجذابة للقارئ. بالتأكيد سأكرر التعامل."</p>
                     <div class="flex items-center gap-4 justify-end">
-                        <div class="text-right"><h4 class="font-bold text-gray-900">محمود حسن</h4><p class="text-xs text-gray-500">مدون تقني</p></div>
-                        <div class="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center text-white font-bold text-lg">م</div>
+                        <div><h4 class="font-bold text-gray-900">محمود حسن</h4><p class="text-xs text-gray-500">مدون تقني</p></div>
+                        <div class="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center text-white font-bold">م</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Payment Section -->
-    <section id="payment" class="py-20 bg-white border-t border-gray-50">
+    <!-- قسم طرق الدفع (Payments) -->
+    <section id="payment" class="py-20 bg-gray-50 border-t border-gray-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <div class="mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">طرق دفع مرنة تناسب الجميع</h2>
-                <p class="text-gray-500">نوفر لك مجموعة واسعة من خيارات الدفع الآمنة والسهلة.</p>
-            </div>
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4 font-bold">طرق دفع مرنة تناسب الجميع</h2>
+            <p class="text-gray-500 mb-12">نوفر لك مجموعة واسعة من خيارات الدفع الآمنة والسهلة عبر المنصات.</p>
+
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                <!-- حلول عالمية -->
                 <div class="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm inactive-view">
                     <h3 class="text-lg font-bold text-gray-800 mb-8 flex items-center justify-center gap-2"><i class="fa-solid fa-globe text-brand-600"></i> حلول عالمية</h3>
                     <div class="grid grid-cols-3 gap-4 items-center">
@@ -182,115 +221,105 @@
                         <div class="flex flex-col items-center"><i class="fa-brands fa-paypal text-4xl text-blue-800 mb-2"></i><span class="text-[10px] font-bold text-gray-400">PayPal</span></div>
                     </div>
                 </div>
+                <!-- منصات العمل الحر -->
                 <div class="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm inactive-view">
                     <h3 class="text-lg font-bold text-gray-800 mb-8 flex items-center justify-center gap-2"><i class="fa-solid fa-briefcase text-brand-600"></i> منصات العمل الحر</h3>
-                    <div class="flex flex-wrap justify-center gap-2">
-                        <span class="px-3 py-1 bg-green-600 text-white rounded-full text-xs font-bold">خمسات</span>
-                        <span class="px-3 py-1 bg-blue-600 text-white rounded-full text-xs font-bold">مستقل</span>
-                        <span class="px-3 py-1 bg-teal-500 text-white rounded-full text-xs font-bold">نفذلي</span>
-                        <span class="px-3 py-1 bg-purple-600 text-white rounded-full text-xs font-bold">كفيل</span>
+                    <div class="flex flex-wrap justify-center gap-2 px-2">
+                        <span class="px-3 py-1 bg-green-600 text-white rounded-full text-[10px] font-bold">خمسات</span>
+                        <span class="px-3 py-1 bg-blue-600 text-white rounded-full text-[10px] font-bold">مستقل</span>
+                        <span class="px-3 py-1 bg-teal-500 text-white rounded-full text-[10px] font-bold">نفذلي</span>
+                        <span class="px-3 py-1 bg-purple-600 text-white rounded-full text-[10px] font-bold">كفيل</span>
+                        <span class="px-3 py-1 bg-green-400 text-white rounded-full text-[10px] font-bold">Fiverr</span>
+                        <span class="px-3 py-1 bg-green-500 text-white rounded-full text-[10px] font-bold">Upwork</span>
                     </div>
                 </div>
+                <!-- للعملاء في مصر -->
                 <div class="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm inactive-view">
                     <h3 class="text-lg font-bold text-gray-800 mb-8 flex items-center justify-center gap-2"><i class="fa-solid fa-location-dot text-brand-600"></i> للعملاء في مصر</h3>
                     <ul class="space-y-4 text-right pr-4 text-sm font-semibold text-gray-600">
                         <li class="flex items-center justify-end gap-3 text-gray-400">انستاباي (InstaPay) <i class="fa-solid fa-bolt text-purple-400"></i></li>
                         <li class="flex items-center justify-end gap-3 text-gray-400">المحافظ الإلكترونية <i class="fa-solid fa-mobile-screen text-brand-400"></i></li>
-                        <li class="flex items-center justify-end gap-3 text-gray-400">الحوالات البريدية <i class="fa-solid fa-building-columns text-green-400"></i></li>
+                        <li class="flex items-center justify-end gap-3 text-gray-400 italic">الحوالات البريدية / فوري <i class="fa-solid fa-building-columns text-green-400"></i></li>
                     </ul>
                 </div>
             </div>
+
+            <!-- البانر السفلي -->
+            <div class="bg-blue-50 border border-blue-100 rounded-3xl p-8 inline-block w-full max-w-4xl inactive-view">
+                <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                    <div class="flex items-center gap-4">
+                        <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 text-2xl shadow-inner"><i class="fa-solid fa-comments-dollar"></i></div>
+                        <div class="text-right">
+                            <h4 class="font-bold text-gray-900">هل لديك وسيلة دفع أخرى؟</h4>
+                            <p class="text-xs text-gray-500">لا تتردد في التواصل معنا لمناقشة إمكانية قبول وسيلة الدفع المناسبة لك.</p>
+                        </div>
+                    </div>
+                    <div class="px-8 py-3 bg-white border border-blue-200 text-blue-600 rounded-2xl font-bold text-sm shadow-sm">ناقش الدفع الآن</div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- ========================================== -->
-    <!-- قسم التواصل (تم تحديثه كما في الصورة تماماً) -->
-    <!-- ========================================== -->
-    <section id="contact" class="py-20 bg-gray-50">
+    <!-- قسم التواصل (Contact) -->
+    <section id="contact" class="py-20 bg-white">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4 font-bold">لنتحدث عن مشروعك</h2>
-            <p class="text-gray-500 mb-12">اختر الطريقة التي تناسبك للتواصل.</p>
+            <p class="text-gray-500 mb-12">اختر الطريقة التي تناسبك للتواصل عبر رسائل المنصة.</p>
 
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch inactive-view">
-                
-                <!-- الكارت الأول: البريد الإلكتروني -->
-                <div class="bg-white rounded-[2rem] shadow-lg p-8 border border-gray-100 text-right flex flex-col justify-between">
-                    <div class="flex items-center justify-end gap-3 mb-8">
+                <!-- البريد -->
+                <div class="bg-white rounded-[2.5rem] shadow-xl p-8 border border-gray-100 text-right flex flex-col justify-between">
+                    <div class="flex items-center justify-end gap-3 mb-10">
                         <h3 class="text-xl font-bold text-gray-900">راسلني عبر البريد</h3>
-                        <div class="w-10 h-10 bg-brand-50 rounded-full flex items-center justify-center text-brand-500">
-                            <i class="fa-solid fa-envelope"></i>
-                        </div>
+                        <div class="w-12 h-12 bg-brand-50 rounded-2xl flex items-center justify-center text-brand-500 shadow-sm"><i class="fa-solid fa-envelope"></i></div>
                     </div>
-                    
                     <div class="space-y-5">
                         <div class="grid grid-cols-2 gap-4">
-                            <div>
-                                <label class="block text-xs font-bold text-gray-400 mb-2 mr-1">البريد الإلكتروني</label>
-                                <div class="w-full h-12 bg-gray-50 rounded-xl border border-gray-100"></div>
-                            </div>
-                            <div>
-                                <label class="block text-xs font-bold text-gray-400 mb-2 mr-1">الاسم الكامل</label>
-                                <div class="w-full h-12 bg-gray-50 rounded-xl border border-gray-100"></div>
-                            </div>
+                            <div><label class="block text-xs font-bold text-gray-400 mb-2 mr-1">البريد الإلكتروني</label><div class="w-full h-12 bg-gray-50 rounded-xl border border-gray-100"></div></div>
+                            <div><label class="block text-xs font-bold text-gray-400 mb-2 mr-1">الاسم الكامل</label><div class="w-full h-12 bg-gray-50 rounded-xl border border-gray-100"></div></div>
                         </div>
-                        <div>
-                            <label class="block text-xs font-bold text-gray-400 mb-2 mr-1">الخدمة المطلوبة</label>
-                            <div class="w-full h-12 bg-gray-50 rounded-xl border border-gray-100 flex items-center justify-between px-4">
-                                <span class="text-gray-400 text-sm font-bold">تحليل البيانات</span>
-                                <i class="fa-solid fa-chevron-down text-gray-300 text-xs"></i>
-                            </div>
-                        </div>
-                        <div>
-                            <label class="block text-xs font-bold text-gray-400 mb-2 mr-1">تفاصيل الرسالة</label>
-                            <div class="w-full h-32 bg-gray-50 rounded-xl border border-gray-100"></div>
-                        </div>
+                        <div><label class="block text-xs font-bold text-gray-400 mb-2 mr-1">الخدمة المطلوبة</label><div class="w-full h-12 bg-gray-50 rounded-xl border border-gray-100 flex items-center justify-between px-4"><span class="text-gray-300 text-sm font-bold italic">تحليل البيانات</span><i class="fa-solid fa-chevron-down text-gray-300 text-xs"></i></div></div>
+                        <div><label class="block text-xs font-bold text-gray-400 mb-2 mr-1">تفاصيل الرسالة</label><div class="w-full h-36 bg-gray-50 rounded-2xl border border-gray-100"></div></div>
                     </div>
-                    
-                    <div class="mt-8 w-full py-4 bg-brand-600 text-white rounded-2xl font-bold flex justify-center items-center gap-2">
-                        <span>إرسال عبر البريد</span>
-                        <i class="fa-solid fa-paper-plane"></i>
+                    <div class="mt-8 w-full py-4 bg-brand-600 text-white rounded-[1.5rem] font-bold flex justify-center items-center gap-2 shadow-lg shadow-brand-100">
+                        <span>إرسال عبر البريد</span> <i class="fa-solid fa-paper-plane"></i>
                     </div>
                 </div>
-
-                <!-- الكارت الثاني: واتساب -->
-                <div class="bg-white rounded-[2rem] shadow-lg p-10 border border-gray-100 flex flex-col items-center text-center justify-center">
-                    <div class="w-24 h-24 bg-green-50 rounded-full flex items-center justify-center text-whatsapp text-5xl mb-8">
-                        <i class="fa-brands fa-whatsapp"></i>
-                    </div>
-                    
+                <!-- واتساب -->
+                <div class="bg-white rounded-[2.5rem] shadow-xl p-10 border border-gray-100 flex flex-col items-center text-center justify-center">
+                    <div class="w-28 h-28 bg-green-50 rounded-full flex items-center justify-center text-whatsapp text-6xl mb-10 shadow-inner"><i class="fa-brands fa-whatsapp"></i></div>
                     <h3 class="text-2xl font-bold text-gray-900 mb-4 font-bold">دردشة سريعة ومباشرة</h3>
-                    <p class="text-gray-500 leading-relaxed mb-10 max-w-sm font-bold">
-                        هل تفضل المحادثات السريعة؟ تواصل معي مباشرة عبر واتساب لمناقشة التفاصيل أو الاستفسار عن الخدمات بشكل فوري.
-                    </p>
-                    
-                    <div class="w-full py-5 bg-whatsapp text-white rounded-[1.5rem] font-bold text-lg flex justify-center items-center gap-3 shadow-lg shadow-green-200">
-                        <i class="fa-brands fa-whatsapp text-2xl"></i>
-                        <span>اضغط للمراسلة فوراً</span>
+                    <p class="text-gray-400 leading-relaxed mb-12 max-w-sm font-semibold">هل تفضل المحادثات السريعة؟ تواصل معي مباشرة عبر رسائل المنصة الخاصة لمناقشة التفاصيل بشكل فوري.</p>
+                    <div class="w-full py-5 bg-whatsapp text-white rounded-[1.5rem] font-bold text-lg flex justify-center items-center gap-3 shadow-xl shadow-green-100">
+                        <i class="fa-brands fa-whatsapp text-2xl"></i> <span>اضغط للمراسلة فوراً</span>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12 text-center border-t border-gray-800">
+    <!-- التذييل (Footer) -->
+    <footer class="bg-gray-900 text-white py-16 text-center border-t border-gray-800">
         <div class="max-w-7xl mx-auto px-4">
-            <div class="text-2xl font-bold mb-4">برو<span class="text-brand-500">سيرفس</span></div>
-            <div class="flex justify-center space-x-6 space-x-reverse mb-8 text-gray-600 text-xl pointer-events-none">
-                <i class="fa-brands fa-linkedin"></i>
-                <i class="fa-brands fa-twitter"></i>
-                <i class="fa-brands fa-whatsapp"></i>
+            <div class="text-3xl font-bold mb-6 font-bold tracking-tight">برو<span class="text-brand-500">سيرفس</span></div>
+            <div class="flex justify-center space-x-8 space-x-reverse mb-10 text-gray-600 text-2xl pointer-events-none">
+                <i class="fa-brands fa-linkedin hover:text-white transition"></i>
+                <i class="fa-brands fa-twitter hover:text-white transition"></i>
+                <i class="fa-brands fa-whatsapp hover:text-white transition"></i>
             </div>
-            <p class="text-xs text-gray-700 font-bold">&copy; 2026 مصطفى حماده. جميع الحقوق محفوظة.</p>
+            <p class="text-sm text-gray-600 font-bold">&copy; 2026 مصطفى حماده. جميع الحقوق محفوظة.</p>
         </div>
     </footer>
 
     <script>
+        // تبديل قائمة الجوال
         const mobileBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
-        mobileBtn.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
+        if(mobileBtn) {
+            mobileBtn.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
+        }
 
+        // تأثير الظل للنافبار عند السكرول
         window.addEventListener('scroll', () => {
             const navbar = document.getElementById('navbar');
             if (window.scrollY > 50) navbar.classList.add('shadow-md');
